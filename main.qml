@@ -1,16 +1,17 @@
-import QtQuick 2.4
-import QtQuick.Controls 1.3
+import QtQuick 2.1
+import QtQuick.Controls 1.1
 import QtQuick.Window 2.2
 
 Window {
     id: mainWindow
-    width: 250
-    height: 150
+    width: 1024
+    height: 200
     visible: true
 
     TextField {
         id: inputField
         anchors.horizontalCenter: parent.horizontalCenter
+        width: 1000
         height: 40
         text: "123"
         onAccepted: focus = false
@@ -36,6 +37,16 @@ Window {
             id: button3
             text: qsTr("3")
             onClicked: keyEmitter.emitKey(Qt.Key_3)
+        }
+        Button {
+            id: button4
+            text: qsTr("4")
+            onClicked: keyEmitter.emitKey(Qt.Key_4)
+        }
+        Button {
+            id: button5
+            text: qsTr("5")
+            onClicked: keyEmitter.emitKey(Qt.Key_5)
         }
     }
     Row {
